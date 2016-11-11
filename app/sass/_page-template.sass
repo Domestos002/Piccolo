@@ -1,0 +1,101 @@
+@import _imports.sass
+
+.no-gutter > [class*='col-']
+    padding-right: 0
+    padding-left: 0
+
+
+.overlay
+    position: relative
+    &:hover
+        &:before
+            z-index: 400
+            position: absolute
+            top: 0
+            right: 0
+            width: 100%
+            height: 100%
+            background: rgba(0, 0, 0, 0.3)
+            content: ''
+
+.scale-on-hover
+    &:hover
+        transform: scale(1.05)
+        +trans()
+
+.img-responsive
+    min-width: 100%
+    max-width: 150%
+    height: auto
+
+.fluid
+    width: 100%
+    height: auto
+
+.fluid-width
+    width: 100%
+
+.fluid-height
+    height: 100%
+
+.icon-fl
+    font-family: $ffFl
+    font-style: normal
+    font-weight: normal
+    font-variant: normal
+    text-transform: none
+    line-height: 1em
+    color: $black
+    font-size: 14px
+    speak: none
+    display: inline-block
+
+.clearfix
+    +clearfix()
+
+.carousel-chevron-left
+    +arr(10px, 2px, l, #fff)
+    position: relative
+    right: -2px
+
+.carousel-chevron-right
+    +arr(10px, 2px, r, #fff)
+    position: relative
+    left: -2px
+
+.page-main-carousel
+    &:hover
+        & .owl-prev
+            +trans()
+            +position(absolute, calc(50% - 15px) none none 0)
+            visibility: visible
+
+        & .owl-next
+            +trans()
+            +position(absolute, calc(50% - 15px) 0 none none)
+            visibility: visible
+
+
+.owl-nav
+    & .owl-prev, .owl-next
+        +size(30px 30px)
+        border-radius: 50%
+        background-color: $black / 1
+        font-size: 0
+        line-height: 0
+        @extend .fl-center
+        &:hover
+            background-color: $black * 0.8
+            +trans()
+
+
+    & .owl-prev
+        +position(absolute, calc(50% - 15px) none none -35px)
+        visibility: hidden
+        &:before
+            @extend .carousel-chevron-left
+    & .owl-next
+        +position(absolute, calc(50% - 15px) -35px none none)
+        visibility: hidden
+        &:before
+            @extend .carousel-chevron-right

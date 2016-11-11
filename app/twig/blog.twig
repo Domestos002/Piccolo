@@ -1,77 +1,73 @@
 {% extends "layouts/main.twig" %}
 {% block pageContent %}
+    <div class="content mb50">
+        <div class="container">
+            <div class="row mb65">
+                <div class="col-xs-12 col-sm-8  post-list">
+                    {% for i in 1..3 %}
+                        {% include "elements/blog_post.twig" with
+                        {"record_date" : "10/11/13",
+                        "record_autor" : "SuPerMen",
+                        "record_tags": "guide, tutorials, livehack",
+                        "thumbnail_title" : "efggegesectetur adipisicing elit. Officia"} %}
+                    {% endfor %}
+                </div>
+            <div class="col-xs-12 col-sm-4 ">
+                    <section class="content-right-nav">
+                        <form class="input-group mb45 " role="search">
+                            <input type="text" class="form-control" placeholder="Search for...">
+                            <span class="input-group-btn">
+                                <button type="submit" class="btn btn-default icon-fl">&#xE806</button>
+                            </span>
+                        </form>
 
-    <div class="breadcrums-block fl-center fd-c mb85">
-        <div class="allocation-link fl-grid mb30">
-            <span class="allocation-sep end"></span>
-            <p class="page-text-title fz-large ml20 mr20 black ttu">MASONRY&nbsp;BLOG</p>
-            <span class="allocation-sep begin"></span>
-        </div>
-        <div class="breadcrums fz-base black ttu fl-grid">
-            <a href="#" class="breadcrum fz-small fw700  black">home</a>
-            <a href="#" class="breadcrum fz-small  fw700 black">blog</a>
-            <span class="breadcrum fz-small  fw700 black">MASONRY BLOG</span>
-        </div>
-    </div>
-    <div class="pb80">
-        <div class="blog-container grey-line-sep">
-            <div class="centered tac mb120"><p class="page-text-title white fz-large tac mb40 cur-p" id="prepend">
-                    Masonry gallery</p>
-                <div class="clearfix p-rel centered blog" id="masonry-container">
-                    <div class="masonry-item row-1 ">
-                        <div class="blog-item">
-                            {#<div class="image-wrapper">
-                                <img class="img" src=" http://placehold.it/270x230" alt="">
-                            </div>#}
-                            <div class="blog-item__footer">
-                                <div class="index__blog__item__header fd-c">
-                                    <div class="index__blog__item__tag-list fl-row">
-                                        <a href="#" class="link-v1  rhomb-sep fl-center fw700 dib vam ttu">restaurant</a>
-                                        <a href="#" class="link-v1  rhomb-sep fl-center fw700 dib vam ttu">restaurant</a>
-                                        <span class="link-v1 fw700 dib vam ttu">restaurant</span></div>
-                                    <i class="fa-clock-o">4 days ago</i>
+                        <div class="content-right-nav centered mb45">
+                            <div class="b-categories">
+                                <div class="record-info__date title-allocation-lines mb20"><h5>categories</h5></div>
+                                <div class="dashed-list">
+                                    <ul class="list-group clearfix">
+                                        <li class="list-item ttu text-orange">
+                                            design
+                                            <span class="icon-fl mr10 pull-left">&#xe800</span>
+                                        </li>
+                                        <li class="list-item ttu text-orange">
+                                            design
+                                            <span class="icon-fl mr10 pull-left">&#xe800</span>
+                                        </li>
+                                        <li class="list-item ttu text-orange">
+                                            design
+                                            <span class="icon-fl mr10 pull-left">&#xe800</span>
+                                        </li>
+                                        <li class="list-item ttu text-orange bb-none">
+                                            design
+                                            <span class="icon-fl mr10 pull-left">&#xe800</span>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
 
-                    </div>
-                    <div class="masonry-item row-1 ">
-                        <div class="blog-item">
-                            {#<div class="image-wrapper">
-                                <img class="img" src=" http://placehold.it/270x230" alt="">
-                            </div>#}
-                            <div class="blog-item__footer">
-                                <div class="index__blog__item__header fd-c">
-                                    <div class="index__blog__item__tag-list fl-row">
-                                        <a href="#" class="link-v1  rhomb-sep fl-center fw700 dib vam ttu">restaurant</a>
-                                        <a href="#" class="link-v1  rhomb-sep fl-center fw700 dib vam ttu">restaurant</a>
-                                        <span class="link-v1 fw700 dib vam ttu">restaurant</span></div>
-                                    <i class="fa-clock-o">4 days ago</i>
-                                </div>
+                        <div class="content-right-nav mb45">
+                            <div class="b-news">
+                                <div class="record-info__date title-allocation-lines mb20"><h5>popular posts</h5></div>
+                                <ul class="b-news__list">
+                                    {% for i in 1..3 %}
+                                        {% include "elements/block-news-item.twig" with
+                                        {"news_icon" : "http://placehold.it/70x70",
+                                        "news_title" : "Lenin: zombie?",
+                                        "news_date": "03/02/2008"} %}
+                                    {% endfor %}
+                                </ul>
                             </div>
                         </div>
-
-                    </div>
-                    <div class="masonry-item row-1 ">
-                        <div class="blog-item">
-                            {#<div class="image-wrapper">
-                                <img class="img" src=" http://placehold.it/270x230" alt="">
-                            </div>#}
-                            <div class="blog-item__footer">
-                                <div class="index__blog__item__header fd-c">
-                                    <div class="index__blog__item__tag-list fl-row">
-                                        <a href="#" class="link-v1  rhomb-sep fl-center fw700 dib vam ttu">restaurant</a>
-                                        <a href="#" class="link-v1  rhomb-sep fl-center fw700 dib vam ttu">restaurant</a>
-                                        <span class="link-v1 fw700 dib vam ttu">restaurant</span></div>
-                                    <i class="fa-clock-o">4 days ago</i>
-                                </div>
-                            </div>
+                        <div class="content-right-nav__b-more-info">
+                            <div class="record-info__date title-allocation-lines mb20"><h5>more info</h5></div>
+                            {% include "elements/tabs.twig"%}
                         </div>
-
-                    </div>
-                    <span class="small-sep"></span>
+                    </section>
                 </div>
             </div>
+            {% include "elements/page-pagination.twig"%}
         </div>
-
+    </div>
 {% endblock %}

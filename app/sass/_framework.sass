@@ -3,37 +3,73 @@
 .clearfix
     +clearfix()
 
-.ttu
-    text-transform: uppercase
-
 .left
     float: left
 
-.tal
-    text-align: left
-
 .right
     float: right
-//g4efe
+
 .db
     display: block
+
+.ovh
+    overflow: hidden
 
 .vat
     vertical-align: top
 
 .dib
     display: inline-block
+    vertical-align: middle
+
+.di
+    display: inline
 
 .ai-c
     align-items: center
+
+.centered
+    margin: 0 auto
+
+.tac
+    text-align: center
+
+.tal
+    text-align: left
+
+.cur-p
+    cursor: pointer
+
+.p-rel
+    position: relative
+
+//______________________________________Flex____________________
+
+.fl-center
+    display: flex
+    align-items: center
+    justify-content: center
+
+.fl-items-center
+    display: flex
+    align-items: center
+
+.fl-justify
+    display: flex
+    justify-content: space-between
+
+.fl-start
+    justify-content: flex-start
+
+.fl-column
+    display: flex
+    flex-direction: column
+    align-self: baseline
 
 .fl-baseline
     display: flex
     align-items: baseline
     justify-content: center
-
-.centered
-    margin: 0 auto
 
 .fl-start
     display: flex
@@ -46,59 +82,23 @@
     display: flex
     flex-direction: row
     align-items: center
+//______________________________________ENDFlex____________________
 
-.cur-p
-    cursor: pointer
-
-.p-rel
-    position: relative
-
-.fl-center
-    display: flex
-    align-items: center
-    justify-content: center
-
-.fl-grid
-    display: flex
-    justify-content: space-between
-
-.fl-start
-    justify-content: flex-start
-
-.m-auto
-    margin: auto
-
-.fd-c
-    flex-direction: column
-
-.tac
-    text-align: center
 //______________________________________Текста и цвета____________________
 
-.ovh
-    overflow: hidden
+.ttu
+    text-transform: uppercase
 
 .white
     color: #fff
 
-.fw700
+.f-bold
     font-weight: 700
-
-.grey
-    color: $grey
-
-.beige
-    color: $beige
-
-.black
-    color: $black
-
-.ffMS
-    font-family: $ffM-s
 
 .fz18
     font-size: 18px
-//____________________
+//______________________________________ENDТекста и цвета____________________
+
 .mb15
     margin-bottom: 15px
 
@@ -114,6 +114,9 @@
 .mb60
     margin-bottom: 60px
 
+.mb65
+    margin-bottom: 60px
+
 .mb25
     margin-bottom: 25px
 
@@ -123,13 +126,14 @@
 .mr10
     margin-right: 10px
 
+.pl20
+    padding-left: 20px
+
 .mb85
     margin-bottom: 85px
 
 .ml20
     margin-left: 20px
-
-
 
 .mr20
     margin-right: 20px
@@ -160,12 +164,20 @@
 
 .pb20
     padding-bottom: 20px
-
+.pr5
+    padding-right: 5px
 .mb150
     margin-bottom: 150px
 
+.mr15
+    margin-right: 15px
+
 .mt50
     margin-top: 50px
+.mt60
+    margin-top: 60px
+.mt40
+    margin-top: 40px
 
 .mb30
     margin-bottom: 30px
@@ -185,86 +197,5 @@
 .mb100
     margin-bottom: 100px
 //_______________________
-.col-12
-    flex-basis: 100%
-
-//.grey-line
-    border-top: 1px solid $darkestgrey
-
-.scale-on-hover
-    &:hover
-        transform: scale(1.05)
-        +trans()
-
-.gutter70
-    margin-left: -15px
-    margin-right: -15px
-    & > div
-        padding-left: 15px
-        padding-right: 15px
-
-.index-image-block
-    +retina-bg("index-bg-1.png", "index-bg-1@2x.png")
-    background-position: center
-    background-repeat: no-repeat
-    padding-top: 75px
-    padding-bottom: 75px
-
-.hidden
-    display: none
-
-.cell-8
-    width: 66.66667%
-
-.allocation-grad-line
-    position: relative
-    display: flex
-    align-items: center
-    &:before
-        margin-top: -1px
-        content: ""
-        display: inline-block
-        margin-right: 10px
-        +size(100px 1px)
-        background-image: -webkit-linear-gradient(right, #fff 0%, #1d1d1d 100%)
-        background-image: -o-linear-gradient(right, #fff 0%, #1d1d1d 100%)
-        background-image: linear-gradient(to left, #fff 0%, #1d1d1d 100%)
-        background-repeat: repeat-x
-        opacity: .3
-    &:after
-        +size(100px 1px)
-        margin-top: -1px
-        margin-left: 10px
-        content: ""
-        display: inline-block
-        background-image: -webkit-linear-gradient(right, #1d1d1d 0%, #fff 100%)
-        background-image: -o-linear-gradient(right, #1d1d1d 0%, #fff 100%)
-        background-image: linear-gradient(to left, #1d1d1d 0%, #fff 100%)
-        background-repeat: repeat-x
-        opacity: .3
 
 
-.rhomb-marker
-    padding-left: 15px
-    &:before
-        content: ''
-        +position(absolute, none none calc(100% - 12px) 0)
-        +size(6px 6px)
-        margin-right: 10px
-        background-color: $grey
-        +transform(rotate(45deg))
-
-
-.rhomb-sep
-    &:after
-        content: ''
-        vertical-align: middle
-        display: inline-block
-        width: 6px
-        height: 6px
-        margin-left: 15px
-        margin-right: 15px
-        transform: rotate(45deg)
-        background-color: $darkergrey
-        &:last-child:after
-            display: none

@@ -1,16 +1,21 @@
 @font-face {
-    font-family: 'Merriweather-Regular';
-    /*src: url('../fonts/Roboto-regular.eot');
-    src: url('../fonts/Roboto-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/Roboto-regular.woff') format('woff'), */url('../fonts/Merriweather-Regular.ttf') format('truetype'); /*url('../fonts/Roboto-regular.svg#Roboto-Regular') format('svg');*/
-    font-style: normal;
-    font-weight: normal;
+  font-family: "fontello";
+  src: url("../fonts/fontello.eot");
+  src: url("../fonts/fontello.eot?#iefix") format("embedded-opentype"), url("../fonts/fontello.woff") format("woff"), url("../fonts/fontello.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
-
-
 @font-face {
-    font-family: 'Merriweather-Bold';
-    /*src: url('../fonts/Roboto-regular.eot');
-    src: url('../fonts/Roboto-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/Roboto-regular.woff') format('woff'), */url('../fonts/Merriweather-Bold.ttf') format('truetype'); /*url('../fonts/Roboto-regular.svg#Roboto-Regular') format('svg');*/
-    font-style: normal;
-    font-weight: normal;
+  font-family: "HelveticaNeueCyr-Medium";
+  src: url("../fonts/HelveticaNeueCyr-Medium.eot");
+  src: url("../fonts/HelveticaNeueCyr-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/HelveticaNeueCyr-Medium.woff") format("woff"), url("../fonts/HelveticaNeueCyr-Medium.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Oswald-Regular";
+  src: url("../fonts/Oswald.eot");
+  src: url("../fonts/Oswald.eot?#iefix") format("embedded-opentype"), url("../fonts/Oswald.woff") format("woff"), url("../fonts/Oswald.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }

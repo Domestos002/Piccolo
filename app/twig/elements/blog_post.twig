@@ -1,0 +1,39 @@
+<div class="post row">
+    <div class="col-xs-12 col-sm-12 col-md-3">
+        <div class="record-info ">
+            <div class=" mb20 record-info__date title-allocation-lines"><h4>{% if record_date %} {{ record_date }} {% else %}09/04/16{% endif %}</h4></div>
+            <div class="record-info__date__attributes mb25">
+                <div class="record-info__date__attributes-item ">
+                    <i class="icon-fl">&#xe801</i>
+                    <p class="dib vam text-orange tdu">{% if record_autor %} {{ record_autor }} {% else %}admin{% endif %}</p>
+                </div>
+                <div class="record-info__date__attributes-item ">
+                    <i class="icon-fl">&#xe802</i>
+                    <p class="dib vam text-orange tdu">{% if record_commetns %} {{ commetns }} {% else %}28{% endif %} comments</p>
+                </div>
+                <div class="record-info__date__attributes-item ">
+                    <i class="icon-fl">&#xe803</i>
+                    <p class="dib vam text-orange tdu">{% if record_tags %} {{ record_tags }} {% else %}photoshop, tutorials, events{% endif %}</p>
+                </div>
+            </div>
+
+            <a href="#" class="btn-dark">Read more</a>
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-9">
+            <div class="record-content">
+                <div class="thumbnail">
+                    <div class="image-wrapper"><img class="img-responsive" src="http://placehold.it/450x180" alt="">
+                    </div>
+                    <div class="caption">
+                        <h3>{% if thumbnail_title %} {{ thumbnail_title }} {% else %}NEWs{% endif %}</h3>
+                    </div>
+                </div>
+                <p class="content-text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam quas quia quisquam quo quos
+                    rerum? Ab alias, blanditiis eveniet ex fugit maiores, minus, placeat quae quis quo quos
+                    reprehenderit veniam!
+                </p>
+            </div>
+    </div>
+</div>

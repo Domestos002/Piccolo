@@ -1,0 +1,13 @@
+    <li class="b-news-item clearfix">
+        <a class="text-black fl-row fl-items-center" href="#">
+            <div class="b-news__list__icon">
+                <img src="{% if news_icon %} {{ news_icon }} {% else %}http://placehold.it/70x70{% endif %}" alt="">
+            </div>
+            <div class="b-news-item__content">
+                <h6>
+                    {% if news_title %} {{ news_title }} {% else %}Lorem ipsum dolor sit amet.{% endif %}
+                </h6>
+                <em>Posted on {% if news_date %} {{ news_date }} {% else %}09/03/12{% endif %}</em>
+            </div>
+        </a>
+    </li>

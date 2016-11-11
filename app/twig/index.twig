@@ -1,0 +1,101 @@
+{% extends "layouts/main.twig" %}
+{% block pageContent %}
+    <div class="content mb50">
+        <div class="container ovh">
+            <div class="row mb45">
+                <div class="col-xs-12 col-sm-8">
+                    <div class="page-main-carousel owl-carousel">
+                        <div class="page-main-carousel-item ovh "><img class="img-responsive"
+                                                                       src="http://placehold.it/770x350" alt=""></div>
+                        <div class="page-main-carousel-item ovh "><img class="img-responsive"
+                                                                       src="http://placehold.it/770x350" alt=""></div>
+                        <div class="page-main-carousel-item ovh "><img class="img-responsive"
+                                                                       src="http://placehold.it/770x350" alt=""></div>
+                        <div class="page-main-carousel-item ovh "><img class="img-responsive"
+                                                                       src="http://placehold.it/770x350" alt=""></div>
+                        <div class="page-main-carousel-item ovh "><img class="img-responsive"
+                                                                       src="http://placehold.it/770x350" alt=""></div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-4 ">
+                    <div class="page-main-carousel-info">
+                        <h3 class="mb20">WELCOME TO PICCOLO. <br>
+                            A BIG THEME IN A SMALL PACKAGE.</h3>
+                        <p class="lead mb40 visible-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+                            pretium vulputate magna sit amet blandit.</p>
+                        <p class="base-label mb15">Cras rutrum, massa non blandit convallis, est lacus gravida enim, eu
+                            fermentum ligula orci et tortor. In sit amet nisl ac leo pulvinar molestie. Morbi blandit
+                            ultricies ultrices.</p>
+                        <p class="text-orange">Read more
+                            <span class="icon-fl mr10 pull-left">&#xe800</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="title-allocation-lines fl-row fl-justify ">
+                <h5>recent work
+                    <small>Lorem ipsum dolor sit amet.</small>
+                </h5>
+                <a href="#" class="btn-dark hidden-sm hidden-xs"> view portfolio</a>
+            </div>
+            <div class="p-main__masonry">
+                <div class="p-main__masonry-list">
+                    {% for i in 1..12 %}
+                        {% include "elements/p-main_masonry-item.twig" %}
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-6">
+                    <div class="b-latest-news-slider ">
+                        <div class="title-allocation-lines fl-justify">
+                            <h5 class="dib pos-r ">
+                                Lorem ipsum dolor sit amet.
+                                <small class="dib">Lorem ipsum dolor sit amet.</small>
+                            </h5>
+
+                            <div class="slider-navigation clearfix">
+                                <span class="cur-p pull-right slider-nav prev btn-inverse icon-fl">&#xe800</span>
+                                <span class="cur-p pull-right slider-nav next btn-inverse icon-fl">&#xe800</span>
+                            </div>
+                        </div>
+                        <div class="latest-news__content owl-carousel ">
+                            {% for i in 1..3 %}
+                                {% include "elements/latest-news-slider-item.twig" with
+                                {"record_date" : "10/11/13",
+                                "record_autor" : "SuPerMen",
+                                "record_tags": "guide, tutorials, livehack",
+                                "thumbnail_title" : "efggegesectetur adipisicing elit. Officia"} %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-6">
+                    <div class="b-reviews-slider">
+                        <div class="title-allocation-lines fl-justify">
+
+                            <h5 class="dib pos-r ">Lorem ipsum dolor sit amet.
+                                <small class="dib">Lorem ipsum dolor sit amet.</small>
+                            </h5>
+
+                            <div class="slider-navigation ">
+                                <span class="cur-p slider-nav prev btn-inverse icon-fl">&#xe800</span>
+                                <span class="cur-p slider-nav next btn-inverse icon-fl">&#xe807</span>
+                            </div>
+                        </div>
+
+                        <div class="b-reviews-slider__content">
+                            <div class="testimonials-slider owl-carousel">
+                                {% for i in 1..3 %}
+                                    {% include "elements/b-testimonials-item.twig" with
+                                    {"testmonials_text" : "Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet",
+                                    "testmonials_autor" : "Client Name, Big Company"} %}
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,476 @@
+@import _imports.sass
+@import ../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss
+
+
+
+a
+    text-decoration: none
+    &:hover
+        color: $orange
+
+body
+    line-height: 1.42857
+    font-size: 12px
+    background-image: url("../img/background-image.jpg")
+    background-color: #fff
+
+#{$all-text-inputs}
+    color: $black
+
+*:not(.tdu)
+    text-decoration: none !important
+
+*:not(*[class*="mb"])
+    margin-bottom: 0
+
+*:not(*[class*="mt"])
+    margin-top: 0
+
+.logo-icon
+    +sprite(logo)
+    display: inline-block
+
+.navbar-nav
+    background: #f8f8f8
+    margin: 0 0 20px 0
+    border-bottom: 1px dotted #a9a9a9
+    border-top: 1px dotted #a9a9a9
+    & > li > a
+        font-size: 12px
+        font-family: $ffOs-serif
+        text-transform: uppercase
+        font-weight: normal
+        padding: 10px 15px 10px
+
+.title-allocation-lines
+    background: $white
+    padding: 10px 5px
+    margin: 0 0 20px 0
+    border-bottom: 1px dotted #a9a9a9
+    border-top: 1px dotted #a9a9a9
+    line-height: 1.2em
+    & > h1, h2, h3, h4, h5, h6
+        line-height: 1.2em
+//_____________________________text________________________________________
+.text-orange
+    color: $orange
+
+.fz14
+    font-size: 14px
+
+.base-text
+    font-size: 21px
+    font-family: $ffHel
+    color: $black
+
+.text-black
+    color: $black
+
+h1, h2, h3, h4, h5, h6
+    text-transform: uppercase
+    font-family: $ffOs-serif
+    text-shadow: 1px 1px 0 #fdfdfd, 2px 2px 0 rgba(81, 81, 81, 0.5), 0 0 1px #fdfdfd
+    line-height: 40px
+
+h6
+    line-height: 20px
+
+.b-testimonials_quote
+    font-size: 16px
+    line-height: 24px
+    font-style: italic
+    margin: 0 20px
+
+.b-testimonials_quote__label
+    font-size: 12px
+    color: #999
+    margin-top: 5px
+//_____________________________ENDtext________________________________________
+
+
+.record-info__date__attributes-item
+    padding-top: 5px
+    & .icon-fl
+        font-size: 16px
+
+.b-news-item__content
+    width: calc(100% - 90px)
+
+.b-news__list__icon
+    margin-right: 20px
+    float: left
+
+.b-news__list
+    & > .b-news-item
+        margin-bottom: 20px
+
+.footer__socials-icon
+    @extend .icon-fl
+    display: inline-block
+    vertical-align: middle
+    line-height: 46px
+    text-align: center
+    font-size: 18px
+    color: #828283
+    &:hover
+        color: #fff
+
+.footer__socials
+    & .socials-circle-icon-wrapper
+        background-color: #504f4f
+        +size(46px, 46px)
+        border-radius: 50%
+        text-align: center
+        position: relative
+        &.facebook-icon
+            &:before
+                @extend .footer__socials-icon
+                content: '\F09A'
+        &.twitter-icon
+            &:before
+                @extend .footer__socials-icon
+                content: '\E804'
+        &.rss-icon
+            &:before
+                @extend .footer__socials-icon
+                content: '\F0D5'
+        &.gplus-icon
+            &:before
+                @extend .footer__socials-icon
+                content: '\E805'
+        &.orange
+            &:hover
+                background-color: #f89737
+        &.green
+            &:hover
+                background-color: #3c7c60
+        &.pink
+            &:hover
+                background-color: #e978a0
+        &.lightblue
+            &:hover
+                background-color: #5fafe1
+        &.blue
+            &:hover
+                background-color: #32508a
+
+footer
+    background-color: $black
+    padding-bottom: 40px
+    padding-top: 40px
+
+.footer-copyright
+    color: #ababab
+
+.dashed-list > .list-group
+    & > li
+        border-bottom: 1px dashed #504f4f
+        //gre
+        padding: 10px 5px
+        font-size: 12px
+        color: #fff
+        &.text-orange
+            color: $orange
+        &.bb-none
+            border-bottom: none
+        & > a
+            &:hover
+                color: $orange
+
+.footer-logo-icon
+    +sprite(footer-logo)
+    display: inline-block
+
+footer [class*="col"]
+    color: #dcdcdc
+    & .text-grey
+        color: #ababab
+    & h5
+        color: #f9f9f9
+        text-shadow: none
+
+.footer__bottom-panel__nav
+    & > a
+        color: #dcdcdc
+        &:after
+            content: ' | '
+            margin: 0 5px 0 5px
+            display: inline-block
+        &:last-child
+            &:after
+                content: ''
+        &:hover
+            color: $orange
+            +trans()
+
+.footer__bottom-panel
+    & .panel-heading
+        +padding(null 20px null 20px)
+//fgeg
+
+.pagination > li > a, .pagination > li > span
+    padding: 10px 15px !important
+
+.post-list
+    & .post
+        margin-bottom: 65px
+        &:last-child
+            margin-bottom: 0
+
+.b-news__list
+    & h6
+        text-shadow: none
+
+.record-info__date__attributes-item
+    & .icon-fl
+        margin-right: 5px
+
+.b-user-login
+    & .form-control
+        height: 30px
+    & .input-group-btn
+        & > .btn
+            +size(30px, 30px)
+            text-align: center
+            padding: 5px
+            background-color: #eeeeee
+
+.b-testimonials-list
+    padding: 0 15px 15px 15px
+    & .b-testimonials-item
+        margin-bottom: 30px
+        &:last-child
+            margin-bottom: 0
+
+.b-testimonials_quote
+    padding: 0
+    margin: 0
+
+header
+    & .nav
+        & .dropdown-menu a
+            color: #ababab
+            border-bottom: 1px solid #474747
+            padding: 10px 10px
+            margin: 0 10px
+            &:hover
+                color: #fcfcfc
+    & .navbar-default
+        border: none
+        background-color: transparent
+        padding: 0
+
+
+.record-info__date__attributes-item
+    display: flex
+
+.btn-dark
+    display: inline-block
+    margin-bottom: 0
+    font-weight: normal
+    text-align: center
+    vertical-align: middle
+    touch-action: manipulation
+    cursor: pointer
+    border: 1px solid transparent
+    white-space: nowrap
+    padding: 6px 12px
+    font-size: 14px
+    line-height: 1.42857
+    border-radius: 4px
+    background-image: linear-gradient(to bottom, #444444, #222222)
+    color: #fff
+    &:hover
+        background-image: linear-gradient(to bottom, #444444*0.8, #222222*0.82)
+        color: #fff
+        +trans()
+
+
+.p-main_masonry-item-link
+    font-family: $ffOs-serif
+    font-size: 12px
+    text-transform: uppercase
+    font-weight: normal
+
+
+.p-main_masonry-item-label
+    font-style: italic
+    font-size: 12px
+
+.p-main__masonry-list
+    +fluid-columns(4, 30px, 50px)
+
+.p-main_masonry-item
+    position: relative
+    & .caption > a
+        color: $black
+        &:hover
+            color: $orange
+    &:hover
+        & .masonry-overlay
+            visibility: visible
+            +trans()
+        & .masonry-overlay-icon
+            visibility: visible
+            +trans()
+.masonry-overlay
+    z-index: 30
+    position: absolute
+    visibility: hidden
+    top: 0
+    +trans()
+    right: 0
+    width: 100%
+    height: 100%
+    background: rgba(0 ,0 ,0 ,0.3)
+
+
+.b-masonry-icons
+    visibility: hidden
+    +trans()
+    +position(absolute, none 0 0 none)
+
+.masonry-item__img > img
+    z-index: 20
+    position: relative
+
+.masonry-overlay-icon
+    z-index: 40
+    position: relative
+    +size(42px, 42px)
+    background-color: $black
+    text-align: center
+    line-height: 42px
+    color: #fff
+    &:hover
+        color: $orange
+    &:not(:last-child)
+        margin-right: 5px
+
+
+.lead
+    font-size: 21px
+    font-weight: 200
+    line-height: 28px
+
+.base-label
+    font-size: 12px
+    line-height: 18px
+
+.page-main-carousel-info
+    padding: 3% 0 3% 0
+
+.collapse.navbar-collapse
+    padding: 0
+
+.latest-news-item__info
+    padding: 10px 0 10px 0
+
+.latest-news__content
+    & .carousel-chevron-left
+        +arr(10px, 2px, l, #fff)
+        position: relative
+        right: -2px
+
+    & .carousel-chevron-right
+        +arr(10px, 2px, r, #fff)
+        position: relative
+        left: -2px
+
+    & .owl-nav
+        & .owl-prev, .owl-next
+            +size(30px, 30px)
+            border-radius: 50%
+            background-color: $black / 1
+            z-index: 200
+            font-size: 0
+            line-height: 0
+            @extend .fl-center
+            &:hover
+                background-color: $black * 0.8
+                +trans()
+        & .owl-prev
+            +position(absolute, 0 0 calc(100% + 55px) none)
+            z-index: 200
+            &:before
+                @extend .carousel-chevron-left
+        & .owl-next
+            +position(absolute, 0 0 calc(100% + 55px) none)
+            z-index: 200
+            &:before
+                @extend .carousel-chevron-right
+
+
+.slider-nav
+    padding: 2px 6px
+    font-size: 11px
+    line-height: 17px
+    color: #fff
+    &:hover
+        color: #fff * 0.8
+    
+.btn-inverse
+    @extend .btn
+    background-color: $black
+    
+.slider-navigation
+    width: 80px
+
+.testimonials-slider
+    .b-testimonials-item
+        background-color: #f9f9f9
+        padding: 20px
+        +trans()
+
+//.quote
+    &:before
+        +position(absolute, 0 70% none none)
+        display: block
+        font-family: $ffFl
+        color: #7f7f7f
+        font-size: 18px
+        content: '\F10D'
+    &:after
+        +position(absolute, none none 0 70%)
+        display: block
+        font-family: $ffFl
+        color: #7f7f7f
+        font-size: 18px
+        content: '\F10E'
+
+.b-testimonials-item
+    text-align: center
+
+.socials-circle-icon-wrapper
+    margin-right: 3px
+
+.footer__socials__item
+    padding-bottom: 20px
+    display: inline-block
+    vertical-align: middle
+
+.footer-masonry
+    display: block
+    & .grid-wrapper
+        width: 60px
+        height: 60px
+        display: inline-block
+        vertical-align: middle
+        margin-bottom: 5px
+        margin-right: 3px
+
+.footer-inform-list
+    +clearfix()
+    & .footer-inform-list-item
+        float: left
+        +make-sm-column(3, 30px)
+        +make-xs-column(12, 30px)
+
+
+.post
+    & .record-info
+        margin-bottom: 65px
+        
+.orange-on-hover
+    &:hover
+        color: $orange
